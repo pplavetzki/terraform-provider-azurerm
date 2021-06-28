@@ -172,8 +172,6 @@ The following arguments are supported:
 
 * `initial_replica_set` - (Required) An `initial_replica_set` block as defined below. The initial replica set inherits the same location as the Domain Service resource.
 
-* `resource_forest` - (Optional) A `resource_forest` block as defined below.
-
 * `resource_group_name` - (Required) The name of the Resource Group in which the Domain Service should exist. Changing this forces a new resource to be created.
 
 * `security` - (Optional) A `security` block as defined below.
@@ -209,28 +207,6 @@ A `notifications` block supports the following:
 An `initial_replica_set` block supports the following:
 
 * `subnet_id` - (Required) The ID of the subnet in which to place the initial replica set.
-
----
-
-A `resource_forest` block supports the following:
-
-* `resource_forest` - (Required) TODO figure out what goes in this property and maybe rename it to something more sensical.
-
-* `forest_trust` - (Required) One or more `forest_trust` blocks as defined below.
-
----
-
-A `forest_trust` block supports the following:
-
-* `name` - (Required) A display name to identity the forest trust.
-
-* `remote_dns_ips` - (Required) A list of at least two DNS server IP addresses for the trusted forest root domain.
-
-* `trust_direction` - (Required) The direction of trust.
-
-* `trust_password` - (Required) The password for authenticating the forest trust.
-
-* `trusted_domain_fqdn` - (Required) The fully-qualified DNS name for the trusted forest.
 
 ---
 
